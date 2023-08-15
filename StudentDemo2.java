@@ -24,13 +24,13 @@ class Stud{
             roll=compscounter;
         }
         else{
-
+            throw new ArithmeticException("ERROR: Wrong Branch");
         }
 
     }
 
-    void showData(){
-        System.out.println("[ NAME: " + this.name + ", PRN: " + this.proll + ", RollNo: " + this.roll + "]");
+    String showData(){
+        return("[ NAME: " + this.name + ", PRN: " + this.proll + ", RollNo: " + this.roll + "]");
     }
 }
 
@@ -39,7 +39,7 @@ public class StudentDemo2 {
     public static void main(String[] args){
         
         String name[]={"Shllok", "Mokksh", "Vini"};
-        String branch[]={"IT", "COMPS", "EXTC"};
+        String branch[]={"IT", "COMPS", "IT"};
         int perc[]={44, 55, 66};
 
         Stud[] s=new Stud[name.length];
@@ -47,6 +47,10 @@ public class StudentDemo2 {
         for(int i=0;i<s.length;i++){
 
             s[i]=new Stud (name[i], branch[i], perc[i]);
+        }
+
+        for(int i=0;i<s.length;i++){
+            System.out.println(s[i].showData());
         }
     }
 }
