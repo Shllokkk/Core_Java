@@ -22,5 +22,8 @@ public class StaticSample{
         StaticSample.set(200);
         b=14;
         StaticSample.set(300);
+        StaticSample.set(300);
     }
 }
+
+// demonstration  for static keyword
