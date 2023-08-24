@@ -10,7 +10,7 @@ class Base1{
     }
 }
 
-class Derived extends Base1{
+class Derived1 extends Base1{
     int num;                                          // member variable overriding
 
     void set(int num1, int num2){                     // method overloading
@@ -26,7 +26,7 @@ class Derived extends Base1{
 public class MethodOverriding{
     public static void main(String[] args){
 
-        Derived d=new Derived();
+        Derived1 d=new Derived1();
 
         d.set(10,20);
         d.show();
