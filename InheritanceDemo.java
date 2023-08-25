@@ -31,6 +31,9 @@ public class InheritanceDemo {
         obj.display();
         obj.derivedTimepass();
         obj.derivedDisplay();
+
+        Derived obj1=null;       // a reference object can point to null 
+        obj1.display();          // this line throws a NullPointerException 
     }
 }
 
