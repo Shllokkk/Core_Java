@@ -3,8 +3,8 @@ public class StaticSample{
     static int a=3;
     static int b;
 
-    static{
-        System.out.println("Inside Static block....");
+    static{                                                       // static block is executed only once when ClassName is mentioned in command line
+        System.out.println("Inside Static block....");             
         b=a*3;
     }
 

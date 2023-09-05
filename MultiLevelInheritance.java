@@ -18,9 +18,10 @@ public class MultiLevelInheritance {
     public static void main(String[] args){
         A obj=new A();                              // object of parent
         A obj1=new B();                             // a reference object of parent class can be assigned to object of child class
-        obj=new C();                                // now the parent class object points to another child class object
+        obj=new C();                                // now the reference object points to another child class object
     }
 }
  
 // when an object of class C is created then internally an object of class A
 // is created at first followed by object of class B and finally object of class C
+// we can also create a reference object of class B and assign it to a new object of class C
