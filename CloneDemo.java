@@ -15,7 +15,6 @@ class Person{
 }
 
 public class CloneDemo {
-    
     public static void main(String[] args){
 
         Person p1=new Person(19,"Shllok");

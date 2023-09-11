@@ -6,18 +6,18 @@ interface Interface2{
     void method3();
 }
 
-class Sample implements Interface1, Interface2{
+class Interface1Sample implements Interface1, Interface2{
     public void method1(){
-        System.out.println("Inside method1 of Sample");
+        System.out.println("Inside method1 of Interface1Sample");
     }
     public void method2(){
-        System.out.println("Inside method2 of Sample");
+        System.out.println("Inside method2 of Interface1Sample");
     }
     public void method3(){
-        System.out.println("Inside method3 of Sample");
+        System.out.println("Inside method3 of Interface1Sample");
     }
     void sampleOwnMethod(){
-        System.out.println("Inside Sample's own method");
+        System.out.println("Inside Interface1Sample's own method");
     }
 }
 
@@ -34,7 +34,7 @@ public class InterfaceDemo1 {
     public static void main(String[] args){
 
         Interface1 I1;
-        Sample s=new Sample();
+        Interface1Sample s=new Interface1Sample();
         I1=s;
         s.method1();
         I1.method2();

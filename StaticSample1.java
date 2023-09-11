@@ -1,10 +1,10 @@
-class Sample{
+class Sample1{
 
     static int a=3;
     static int b;
 
     static{
-        System.out.println("Inside Static block of Sample....");
+        System.out.println("Inside Static block of Sample1...");
         b=a*4;
     }
 
@@ -18,20 +18,20 @@ class Sample{
 public class StaticSample1 {
 
     static{
-        System.out.println("Inside Static of StaticSample....");
+        System.out.println("Inside Static of StaticSample1....");
     }
     public static void main(String[] args){
 
         System.out.println("Inside Main....");
-        Sample obj1=new Sample();
-        Sample obj2=new Sample();
-        Sample obj3=new Sample();
+        Sample1 obj1=new Sample1();
+        Sample1 obj2=new Sample1();
+        Sample1 obj3=new Sample1();
 
-        Sample.set(100);
+        Sample1.set(100);
         obj1.a=1000;                            // static variables should be accesed in a static way
         obj1.b=4;
-        Sample.set(20);
-        Sample.a=12;
+        Sample1.set(20);
+        Sample1.a=12;
         obj2.set(40);                         // static methods should be accessed in a static way
         obj3.b=1;
         obj1.a=2;

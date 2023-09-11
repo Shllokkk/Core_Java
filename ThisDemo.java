@@ -1,8 +1,8 @@
-class Sample{
+class ThisSample{
 
     private int num1,num2;
 
-    Sample(int num1, int num2){
+    ThisSample(int num1, int num2){
 
         this.num1=num1;
         this.num2=num2;
@@ -18,8 +18,8 @@ class Sample{
 public class ThisDemo{
     public static void main(String args[]){
 
-        Sample s1=new Sample(23,14);
-        Sample s2=new Sample(20,22);
+        ThisSample s1=new ThisSample(23,14);
+        ThisSample s2=new ThisSample(20,22);
         s2.display();
         s1.display();
     }
