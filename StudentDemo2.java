@@ -1,11 +1,11 @@
-class Stud{
+class Student2{
 
     private String name,branch;
     private int proll, roll;
     private static int prncounter, compscounter, itcounter;
     double perc;
 
-    Stud(String n,String b, double p){
+    Student2(String n,String b, double p){
         this.name=n;
         this.branch=b;
         this.perc=p;
@@ -42,11 +42,11 @@ public class StudentDemo2 {
         String branch[]={"IT", "COMPS", "IT"};
         int perc[]={44, 55, 66};
 
-        Stud[] s=new Stud[name.length];
+        Student2[] s=new Student2[name.length];
 
         for(int i=0;i<s.length;i++){
 
-            s[i]=new Stud (name[i], branch[i], perc[i]);
+            s[i]=new Student2 (name[i], branch[i], perc[i]);
         }
 
         for(int i=0;i<s.length;i++){
