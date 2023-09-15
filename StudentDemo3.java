@@ -49,19 +49,19 @@ class Student3{
             e.printStackTrace();
         }
     }
-    void delete(){
+    /*void delete(){
         this.id=0000;
         this.name="null";
         this.perc=0.0;
         System.out.println("Student record deleted successfully!");
-    }
+    }*/
 }
 
 public class StudentDemo3 {
     public static void main(String[] args) {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         Student3[] obj=new Student3[20];
-        int addcntr=0;
+        int addcntr=-1;
 
         for(int i=0;i<obj.length;i++)
             obj[i]=new Student3();
@@ -80,8 +80,8 @@ public class StudentDemo3 {
                 switch(Integer.parseInt(br.readLine())){
                     case 1:
                         if(addcntr<obj.length){
-                            obj[addcntr].add(br);
                             addcntr++;
+                            obj[addcntr].add(br);
                         }
                         break;
 
@@ -89,7 +89,7 @@ public class StudentDemo3 {
                         System.out.print("Enter Student ID: ");
                         int tempid=Integer.parseInt(br.readLine());
                         int cntr2=0;
-                        for(int i=0;i<addcntr;i++){
+                        for(int i=0;i<=addcntr;i++){
                             if(tempid==obj[i].id){
                                 obj[i].search();
                                 cntr2++;
@@ -104,7 +104,7 @@ public class StudentDemo3 {
                         System.out.print("Enter Student ID: ");
                         tempid=Integer.parseInt(br.readLine());
                         int cntr3=0;
-                        for(int i=0;i<addcntr;i++){
+                        for(int i=0;i<=addcntr;i++){
                             if(tempid==obj[i].id){
                                 obj[i].update(br);
                                 cntr3++;
@@ -119,10 +119,15 @@ public class StudentDemo3 {
                         System.out.print("Enter Student ID: ");
                         tempid=Integer.parseInt(br.readLine());
                         int cntr4=0;
-                        for(int i=0;i<addcntr;i++){
+                        for(int i=0;i<=addcntr;i++){
                             if(tempid==obj[i].id){
-                                obj[i].delete();
+                                while(i<=addcntr){
+                                    obj[i]=obj[i+1];
+                                    i++;
+                                }
+                                addcntr--;
                                 cntr4++;
+                                System.out.println("Student record deleted successfully!");
                                 break;
                             }
                         }
@@ -133,8 +138,8 @@ public class StudentDemo3 {
                     case 5:
                         Student3 temp=new Student3();
                         System.out.println("Records sorted by Name(asc)----");
-                        for(int i=0;i<obj.length;i++){
-                            for(int j=i+1;j<obj.length;j++){
+                        for(int i=0;i<=addcntr;i++){
+                            for(int j=i+1;j<=addcntr;j++){
                                 if((obj[i].name.compareToIgnoreCase(obj[j].name))>0){
                                     temp=obj[i];
                                     obj[i]=obj[j];
@@ -142,15 +147,15 @@ public class StudentDemo3 {
                                 }
                             }
                         }
-                        for(int i=0;i<obj.length;i++)
+                        for(int i=0;i<=addcntr;i++)
                             System.out.println("Student ID: "+obj[i].id+"\nStudent name: "+obj[i].name+"\nStudent percentage: "+obj[i].perc);
                         break;
 
                     case 6:
                         temp=new Student3();
                         System.out.println("Records sorted by percentage(desc)----");
-                        for(int i=0;i<obj.length;i++){
-                            for(int j=i+1;j<obj.length;j++){
+                        for(int i=0;i<=addcntr;i++){
+                            for(int j=i+1;j<=addcntr;j++){
                                 if(obj[i].perc<obj[j].perc){
                                     temp=obj[i];
                                     obj[i]=obj[j];
@@ -158,7 +163,7 @@ public class StudentDemo3 {
                                 }
                             }
                         }   
-                        for(int i=0;i<obj.length;i++)
+                        for(int i=0;i<=addcntr;i++)
                             System.out.println("Student ID: "+obj[i].id+"\nStudent name: "+obj[i].name+"\nStudent percentage: "+obj[i].perc);
                         break;
 
