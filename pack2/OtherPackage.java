@@ -1,9 +1,8 @@
 package pack2;
-import pack1.Protection;
 
 class OtherPackage {
     OtherPackage(){
-        Protection P=new Protection();
+        pack1.Protection P=new pack1.Protection();
         System.out.println("Inside SamePackage....");
         //System.out.println("Pri_n: " + P.pri_n);    
         //System.out.println("n: " + P.n);

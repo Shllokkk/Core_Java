@@ -1,7 +1,6 @@
 package pack2;
-import pack1.Protection;
 
-class Derived2 extends Protection{
+class Derived2 extends pack1.Protection{
     Derived2(){
         System.out.println("Inside Derived2....");
         // System.out.println("Pri_n: " + pri_n);

@@ -49,12 +49,6 @@ class Student3{
             e.printStackTrace();
         }
     }
-    /*void delete(){
-        this.id=0000;
-        this.name="null";
-        this.perc=0.0;
-        System.out.println("Student record deleted successfully!");
-    }*/
 }
 
 public class StudentDemo3 {
