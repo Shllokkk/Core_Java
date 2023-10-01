@@ -3,7 +3,7 @@
 
 int* deque;
 int front=-1,rear=-1;
-int MAX=10;
+int Max=10;
 int sizeofdeque=40;
 
 void state();
@@ -17,7 +17,7 @@ int count();
 
 void main()
 {
-    deque=(int*) malloc(MAX*sizeof(int));
+    deque=(int*) malloc(Max*sizeof(int));
     int choice;
     int loopexit;
     
@@ -76,7 +76,7 @@ void main()
 
 void state()
 {
-    printf("\nCapacity of Queue: %d integers (%d bytes)",MAX,sizeofdeque);
+    printf("\nCapacity of Queue: %d integers (%d bytes)",Max,sizeofdeque);
     printf("\nSize of Queue: %d integers (%d bytes)",count(),count()*4);
 }
 
@@ -91,17 +91,17 @@ void enQueueRear()
     }
     else
     {
-        if(rear==MAX-1)
+        if(rear==Max-1)
         {
             int* temp;
-            temp=(int*) malloc((MAX+5)*sizeof(int));
-            for(int i=0;i<MAX;i++)
+            temp=(int*) malloc((Max+5)*sizeof(int));
+            for(int i=0;i<Max;i++)
             {
                 temp[i]=deque[i];
             }
             deque=temp;
-            MAX+=5;
-            sizeofdeque=MAX*4;
+            Max+=5;
+            sizeofdeque=Max*sizeof(int);
             rear++;
             printf("\nEnter element to be inserted at rear: ");
             scanf("%d",&deque[rear]);
@@ -157,17 +157,17 @@ void deQueueFront()
 
 void trimQueue()
 {
-    if(count()!=MAX)
+    if(count()!=Max)
     {
         int* temp;
-        temp=(int*) malloc((MAX+5)*sizeof(int));
+        temp=(int*) malloc((Max+5)*sizeof(int));
         for(int i=0;i<count();i++)
         {
             temp[i]=deque[i];
         }
         deque=temp;
-        MAX=count();
-        sizeofdeque=MAX*4;
+        Max=count();
+        sizeofdeque=Max*4;
         printf("\nQueue trimmed successfully!");
     }
     else
