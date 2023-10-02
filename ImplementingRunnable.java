@@ -5,6 +5,7 @@ class MySecondThread implements Runnable {
         t=new Thread(this);
         t.start();
     }
+    
     public void run() {
         try{
             for(int i=1;i<=3;i++) {

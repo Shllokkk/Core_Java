@@ -2,7 +2,7 @@ class CallMe {
     public void /*synchronized*/ call(String msg) {         // we can also use synchronized keyword in method signature
         System.out.print("["+msg);
         try{
-        Thread.sleep(500);
+            Thread.sleep(500);
         }catch(InterruptedException e) {
             e.printStackTrace();
         }
