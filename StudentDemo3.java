@@ -1,5 +1,8 @@
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.File;
 
 class Student3{
     static int idcntr=2300;
@@ -52,11 +55,14 @@ class Student3{
 }
 
 public class StudentDemo3 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+        File f=new File("StudentDemo3.txt");
+        FileOutputStream fos=new FileOutputStream(f,true);
+
         Student3[] obj=new Student3[20];
         int addcntr=-1;
-
         for(int i=0;i<obj.length;i++)
             obj[i]=new Student3();
 
@@ -76,6 +82,12 @@ public class StudentDemo3 {
                         if(addcntr<obj.length){
                             addcntr++;
                             obj[addcntr].add(br);
+                            fos.write("\nID: ".getBytes());
+                            fos.write(String.valueOf(obj[addcntr].id).getBytes());
+                            fos.write("\nNAME: ".getBytes());
+                            fos.write(obj[addcntr].name.getBytes());
+                            fos.write("\nPERCENTAGE: ".getBytes());
+                            fos.write(String.valueOf(obj[addcntr].perc).getBytes());
                         }
                         break;
 
@@ -165,7 +177,7 @@ public class StudentDemo3 {
                         System.out.println("Invalid Choice!");
                         break;
                 }
-            }catch(Exception e){
+            }catch(IOException e){
                 e.printStackTrace();
             }
         }
