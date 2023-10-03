@@ -1,4 +1,5 @@
 class MyThread extends Thread{
+
     MyThread(String tname) {
         super(tname);
     }
@@ -8,7 +9,7 @@ class MyThread extends Thread{
         try{
             for(int i=1;i<4;i++) {
                 System.out.println(this.getName()+":"+i);
-                Thread.sleep(-500);
+                Thread.sleep(500);
             }
         }catch(InterruptedException e) {
             e.printStackTrace();
@@ -23,7 +24,7 @@ public class ExtendingThread {
         try{
           for(int i=1;i<4;i++) {
                 System.out.println("MainThread:"+i);
-                Thread.sleep(500);
+                Thread.sleep(1000);
         }
         }catch(InterruptedException e) {
             e.printStackTrace();
