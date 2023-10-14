@@ -17,7 +17,7 @@ public class ThrowDemo1 {
        int res= divide(12,0);         // this function call also causes exception and is shown in stacktrace
 
        System.out.println("Result = " + res);   //this line cannot get executed as the thrown exception is not dealt
-                                                // with by a cath handler instead JVM handles it
+                                                // with by a catch handler instead JVM handles it
     }
 }
 

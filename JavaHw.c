@@ -4,7 +4,6 @@
 int* deque;
 int front=-1,rear=-1;
 int Max=10;
-int sizeofdeque=40;
 
 void state();
 void enQueueRear();
@@ -19,13 +18,13 @@ void main()
 {
     deque=(int*) malloc(Max*sizeof(int));
     int choice;
-    int loopexit;
+    int loopexit=0;
     
     LABEL:
-    while(1)
+    while(loopexit==0)
     {
         printf("\n\n---Array Implementation Of Queue---");
-        printf("\n1. Check the state of Queue\n2. Insert element at the rear of the Queue\n3. Insert element at the front of the Queue\n4. Delete element from the rear of the Queue\n5. Delete element from the front of the Queue\n6. Trim the Queue to size\n7. Display elements of the Queue");
+        printf("\n1. Check the state of Queue\n2. Insert element at the rear of the Queue\n3. Insert element at the front of the Queue\n4. Delete element from the rear of the Queue\n5. Delete element from the front of the Queue\n6. Trim the Queue to size\n7. Display elements of the Queue\n8. Exit");
         printf("\n\nSelect option: ");
         scanf("%d", &choice);
 
@@ -59,24 +58,19 @@ void main()
                 display();
                 break;
 
+            case 8:
+                loopexit=1;
+                break;
+
             default:
                 break;
         }
-
-        printf("\nDo you want to exit(1/0): ");
-        scanf("%d", &loopexit);
-
-        if(loopexit==0)
-        {
-            goto LABEL;
-        }
-        break;
     }
 }
 
 void state()
 {
-    printf("\nCapacity of Queue: %d integers (%d bytes)",Max,sizeofdeque);
+    printf("\nCapacity of Queue: %d integers (%d bytes)",Max,Max*sizeof(int));
     printf("\nSize of Queue: %d integers (%d bytes)",count(),count()*4);
 }
 
@@ -101,7 +95,6 @@ void enQueueRear()
             }
             deque=temp;
             Max+=5;
-            sizeofdeque=Max*sizeof(int);
             rear++;
             printf("\nEnter element to be inserted at rear: ");
             scanf("%d",&deque[rear]);
@@ -167,7 +160,6 @@ void trimQueue()
         }
         deque=temp;
         Max=count();
-        sizeofdeque=Max*4;
         printf("\nQueue trimmed successfully!");
     }
     else
