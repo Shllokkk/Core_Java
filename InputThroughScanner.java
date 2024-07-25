@@ -9,7 +9,7 @@ public class InputThroughScanner {
         String name=sc.nextLine();
         System.out.print("Enter age: ");
         int age=sc.nextInt();
-        sc.nextLine();                                //adding extra nextLine() after a nextInt() 
+        //sc.nextLine();                                //adding extra nextLine() after a nextInt() 
         System.out.print("Enter address: ");
         String add=sc.nextLine();
 

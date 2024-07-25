@@ -14,12 +14,7 @@ public class TryCatch {
 
         }catch(ArithmeticException e){
 
-            System.out.println("Cannot divide by zero...");  //printing custom message 
-            
-            System.out.println(e);  //prints java.lang.ArithmeticException: / by zero
-            
-            e.printStackTrace();    // java.lang.ArithmeticException: / by zero
-                                    // at TryCatch.main(TryCatch.java:10)
+                // at TryCatch.main(TryCatch.java:10)
                                 
         } //end of catch
 

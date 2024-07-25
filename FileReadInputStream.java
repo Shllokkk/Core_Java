@@ -18,7 +18,5 @@ public class FileReadInputStream {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-
     }
 }
