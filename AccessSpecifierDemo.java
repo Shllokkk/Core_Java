@@ -18,7 +18,7 @@ public class AccessSpecifierDemo {
     }   
 }
 
-// a variable specified as private can be olny accessed within the same class
+// a variable specified as private can be only accessed within the same class
 // it cant be accessed directy even by an object of the same class in the main method
 // but it can be accessed in a controled manner by the object by calling a method of the class
 // in which the private variable is declared 
